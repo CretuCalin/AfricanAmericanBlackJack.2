@@ -8,7 +8,7 @@ public class ClientClass extends Thread
 {
 
     private volatile boolean endGame;
-    private Socket socket; // pentru conectare la server
+    private Socket socket; 
     private int port ;
     private String ip;
 
@@ -40,24 +40,7 @@ public class ClientClass extends Thread
 
 
 
-    /*   while((message = (String)input.readObject())!= "You Lost!")
-       {
-             String message;
-           Character c ;
-           total = Integer.parseInt(message);
-           System.out.printf("Totalul tau este %d ", total);
-           System.out.println("Continue ? (y/n)");
-           Scanner scan = new Scanner (System.in);
-           c = (char) scan.nextInt();
-           if (c == 'y')
-               output.writeObject(c);
-           else
-               break;
-
-       }
-       message = (String)input.readObject();
-       System.out.println(message);
-   }*/
+    
     public void connect()
     {
         try {
@@ -66,6 +49,7 @@ public class ClientClass extends Thread
             e.printStackTrace();
         }
     }
+    
     public void setUpStreams()
     {
 
@@ -83,29 +67,6 @@ public class ClientClass extends Thread
         setUpStreams();
         System.out.println("SetUpStreams");
 
-
-
     }
-    //public void run ()
-   // {
-    //    try {
-            // int card1, card2;
-            //System.out.println("Server connection done");
-            //input = (ObjectInputStream) socket.getInputStream();
-            // sus si jos sunt echivalente?
-
-            //card1 = (int)input.readObject();
-            //card2 = (int)input.readObject();
-            //System.out.printf("Your total is %d ", card1+card2);
-            // Se disting doua cazuri :
-            // 1. Jucatorul are sub 21 punctaj -> poate continua sau nu
-            // 2. Jucatorul are peste 21 -> se opreste din joc
-
-
-    //    }catch (Exception e)
-    //    {
-
-    //    }
-   // }
 
 }
